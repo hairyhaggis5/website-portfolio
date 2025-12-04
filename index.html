@@ -16,16 +16,19 @@
       <span class="close-btn" onclick="closePDFModal(event)">&times;</span>
 
       <div class="modal-flex">
-        <!-- Left: iframe -->
-        <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+        <!-- Left: media container -->
+          <div class="modal-media">
+          <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+          <img id="imageFrame" src="" alt="" />
+      </div>
 
         <!-- Right: description panel -->
         <div id="modalDescription" class="modal-description">
-          <!-- This gets filled dynamically -->
+      <!-- Filled dynamically -->
         </div>
-      </div>
+</div>
     </div>
-  </div>
+  </div>  
 
 
  <header class="site-header">
@@ -36,9 +39,9 @@
     </div>
     <div class="header-right">
       <nav>
-        <a href="#about" data-section="about" class="nav-link active">About • </a>
-        <a href="#projects" data-section="projects" class="nav-link">Projects • </a>
-        <a href="#experience" data-section="experience" class="nav-link">Experience </a>
+        <a href="#about" data-section="about" class="nav-link active"><span>About</span> • </a>
+        <a href="#projects" data-section="projects" class="nav-link"><span>Projects</span> • </a>
+        <a href="#experience" data-section="experience" class="nav-link"><span>Experience</span> </a>
         
               </nav>
     </div>
@@ -311,8 +314,37 @@
     <section id="projects" class="section page-section">
       <div class="container">
         
-        <div class="projects-grid">
+        
+          <!-- Project 2 F1 Machine Learning-->
+          
+
+         <div class="projects-grid">
+          <div
+            class="project-card project-link"
+            onclick="openPDFModal(
+            'Predicting Lap Times in Formula 1 Report.pdf',
+            `<h2>Predicting F1 Lap Times with Machine Learning</h2>
+            <p>Capstone project for M.S. in Data Science degree. Created a script to predict Formula One (F1) race lap times for the 2025 season using machine learning models. 
+            I utilized various machine learning algorithms to analyze historical race data, driver performance metrics, and track conditions to predict race outcomes. 
+            Four different models were tested and compared for accuracy. Project concluded with a presentation and report. 
+            Script can be accesed via
+            <a href='https://github.com/hairyhaggis5/MS-Data-Science-Capstone' target='_blank'>GitHub</a></p>
+            <p><strong>Organization:</strong> Saint Peter&apos;s University</p>\
+            <p><strong>Location:</strong> Jersey City, NJ, USA</p>\
+            <p><strong>Year:</strong> 2025</p>\
+            <p><strong>Tools:</strong> Python (Sklearn, matplotlib)</p>`
+            )"
+            
+          >
+            <img src="images/F1predthum.png" alt="F1 Predicting Models" class="project-thumb">
+            <span class = "year-badge">2025</span>
+            <h3>Predicting Lap Times in F1 Using Machine Learning</h3>
+          </div>
+          
+        
+          
           <!-- Project 1 F1 Miami Dashboard-->
+          
           <div 
             class="project-card project-link"
             onclick='openPDFModal("https://public.tableau.com/views/DS620FinalProject_Hamish/Miami2025Story?:showVizHome=no&amp;:embed=true",
@@ -329,36 +361,14 @@
             <img src="images/Miami_Dashboard_Thumb.png" alt="Miami F1 Dashboard" class="project-thumb">
             <span class = "year-badge">2025</span>
             <h3>Miami F1 Dashboard</h3>
-          </div>
-
-          <!-- Project 2 F1 Machine Learning-->
-          <div
-            class="project-card project-link"
-            onclick="openPDFModal(
-            'images/F1predthum.png',
-            `<h2>Predicting F1 Race Results with Machine Learning</h2>
-            <p>Capstone Project for M.S. in Data Science degree. Created a script to predict formuala one race outcomes using machine learning models. Script can be accesed on GitHub:
-            <a href='https://github.com/hairyhaggis5/MS-Data-Science-Capstone' target='_blank'>GitHub</a></p>
-            <p><strong>Organization:</strong> Saint Peter&apos;s University</p>\
-            <p><strong>Location:</strong> Jersey City, NJ, USA</p>\
-            <p><strong>Year:</strong> 2025</p>\
-            <p><strong>Tools:</strong> Tableau, Python (Sklearn, matplotlib)</p>`
-            )"
-            
-          >
-            <img src="images/F1predthum.png" alt="F1 Predicting Models" class="project-thumb">
-            <span class = "year-badge">2025</span>
-            <h3>Predicting F1 Race Results with Machine Learning</h3>
-          </div>
-
-          
+          </div> 
 
             
          <!-- Project 3 Kaart Drives Story Map -->
         <div
             class="project-card project-link"
             onclick="openPDFModal(
-              'images/Kaart_drives_img.png',
+              'images/kaart_ind.png',
               `<h2>Kaart Drives Webmap</h2>
             <p>An interactive webmap showcasing all of the Kaart international imagery collection trips from 2015–2024. Projects from 2022 onwards were managed by myself.</p>
             <p><strong>Organization:</strong> Kaart</p>
@@ -385,16 +395,18 @@
             onclick="openPDFModal(
             'images/CPALdesc.jpg', 
             `<h2>Child Protection Action Lab Imagery Collection Project</h2>
-            <p>Managed a global imagery collection project for the Child Protection Action Lab (CPAL), coordinating field teams across multiple countries to gather street-level imagery for child protection initiatives.</p>
+            <p>Managed a City wide imagery collection project for the Child Protection Action Lab (CPAL), 
+              Imagery was collected to determine where CPAL could best allocate resources. 
+              The project required yearly imagery collection</p>
             <p><strong>Organization:</strong> Kaart / Child Protection Action Lab</p>\
             <p><strong>Location:</strong> Remote / Global</p>\
             <p><strong>Year:</strong> 2023</p>\
             <p><strong>Tools:</strong> Project Management, Field Data Collection, Geospatial Analysis</p>`
             )"
           > 
-            <span class = "year-badge">2023</span>
-            <img src="images/CPALthumb.jpg" alt="Child Protection Action Lab Imagery Collection Project" class="project-thumb">
-            <h3>Child Protection Action Lab Imagery Collection Project</h3>
+            <span class = "year-badge">2022-2024</span>
+            <img src="images/CPALthumb.png" alt="Child Protection Action Lab Imagery Collection Project" class="project-thumb">
+            <h3>CPAL Imagery Collection Project</h3>
             
           </div>
 
@@ -404,11 +416,12 @@
             onclick="openPDFModal(
              'images/TrafficSignProjectDesc.jpg',
              `<h2>Traffic Sign Detection</h2>
-            <p>Need to add.</p>
-            <p><strong>Organization:</strong> Kaart / Meta</p>\
-            <p><strong>Location:</strong> Remote / Global</p>\
+            <p>I managed a data collection project in San Francisco, CA. Sub meter accuracy of all street signs was gathered. 
+              GPS data was then processed and compared to AI models detecting street sign in Mapillary </p>
+            <p><strong>Organization:</strong> Kaart </p>\
+            <p><strong>Location:</strong> San Francisco, CA, USA</p>\
             <p><strong>Year:</strong> 2023</p>\
-            <p><strong>Tools:</strong> Project Management, Field Data Collection, Geospatial Analysis</p>`
+            <p><strong>Tools:</strong> Project Management, Field Data Collection, Mapillary</p>`
             )"
             >
             <span class = "year-badge">2023</span>
@@ -422,9 +435,11 @@
             class = "project-card project-link"          
             onclick="openPDFModal('images/MidEastNamingProjectDesc.jpg',
             `<h2>Qatar Naming Project</h2>
-            <p>Managed a project to update and verify place names in Qatar for improved geospatial data accuracy. Coordinated with local teams to ensure culturally appropriate and accurate naming conventions.</p>
+            <p>I managed a project to update and verify street names in Qatar for improved geospatial data accuracy. 
+              Coordinated an imagery collection trip and coordinated with local teams to ensure culturally 
+              appropriate and accurate naming conventions.</p>
             <p><strong>Organization:</strong> Kaart</p>
-            <p><strong>Location:</strong> Remote / Global</p>
+            <p><strong>Location:</strong> Qatar / Grand Junction</p>
             <p><strong>Year:</strong> 2023</p>
             <p><strong>Tools:</strong> Project Management, Field Data Collection, Geospatial Analysis</p>`
             )"
@@ -441,7 +456,7 @@
             class="project-card project-link" 
             onclick='openPDFModal("images/VA Map.pdf#view=FitV", 
             "<h2>VA Western Slope Covid Map</h2>\
-            <p>Large format printed map created for the Western Slope VA office showing their COVID response clinics.</p>\
+            <p>Large format printed map created for the Western Slope VA office showing their COVID response clinics and service areas.</p>\
             <p><strong>Organization:</strong> Western Slope VA Office</p>\
             <p><strong>Location:</strong> Western Slope, CO, USA</p>\
             <p><strong>Year:</strong> 2021</p>\
@@ -466,8 +481,7 @@
           <a href="https://www.openstreetmap.org/user/(Inactive)%20hairyhaggis_kaart" target="_blank" class="project-card project-link">
                <span class = "year-badge">2019-2025</span>
             <img src="images/osm-logo.svg" alt="Kaart OSM Profile" class="project-thumb">
-            <h3>Kaart OSM Profile</h3>
-            <p>Short one-line description of the project.</p>
+            <h3>Kaart OpenStreetMap Profile</h3>
           </a>
 
           
@@ -480,18 +494,21 @@
             class="project-card project-link"
             onclick="openPDFModal(
               'images/MSGIS Poster.pdf',
-           `<h2>MSGIS Project Poster</h2>
-            <p>Final project poster for Master&apos;s in GIS program at SJSU. Showcased my capstone project analyzing wildfire risk using GIS techniques.</p>
-            <p><strong>Organization:</strong> San Jose State University</p>\
-            <p><strong>Location:</strong> San Jose, CA, USA</p>\
+           `<h2>M.S. GIS Project Poster</h2>
+            <p>Final project poster for the M.S. in GIS program at the University of Redlands.
+              For my capstone, I built a complete electric utility network for the City of Aspen, including a mobile
+              data collection app and an AR application for visualizing underground utilities.
+              The project was selected for display at the 2018 Esri User Conference.</p>
+            <p><strong>Organization:</strong> University of Redlands</p>\
+            <p><strong>Location:</strong> Aspen, Colorado</p>\
             <p><strong>Year:</strong> 2018</p>\
-            <p><strong>Tools:</strong> ArcGIS Pro, QGIS, Python</p>`
+            <p><strong>Tools:</strong> ArcGIS Pro, Geometric Networks </p>`
 
             )"
              >
             <span class = "year-badge">2018</span>           
-            <img src="images/MSGISthumb.png" alt="Project 11 thumbnail" class="project-thumb">
-            <h3>MSGIS Project Poster</h3>
+            <img src="images/MSGISthumb.png" alt="MSGIS Poster" class="project-thumb">
+            <h3>City of Aspen Electric Utility Network Poster</h3>
             
           </div>
           
@@ -501,16 +518,18 @@
             onclick = "openPDFModal(
               'https://mapaspen-cityofaspen.opendata.arcgis.com/',
               `<h2>City of Aspen Open Data Site</h2>
-            <p>City of Aspen Open Data Portal showcasing various datasets and interactive maps. *has been updated since I worked on this project, but the general structure and sentiment remains.</p>
+            <p>City of Aspen Open Data Portal showcasing various datasets and interactive maps. 
+              I created the inital version of this website and many of the maps and data inside of it</p>
+              <p>*has been updated since I worked on this project, but the general structure and sentiment remains very similar.</p>
             <p><strong>Organization:</strong> City of Aspen</p>
-            <p><strong>Location:</strong> City of Aspen, CO, USA</p>
+            <p><strong>Location:</strong> Aspen, CO, USA</p>
             <p><strong>Year:</strong> 2017</p>
             <p><strong>Tools:</strong> ArcGIS Online, JavaScript, HTML, CSS</p>`
             )" 
             >
 
             <span class = "year-badge">2017</span>
-            <img src="images/COAopenthumb.png" alt="City of Aspen Open Data Portal" class="project-thumb">
+            <img src="images/COA.png" alt="City of Aspen Open Data Portal" class="project-thumb">
             <h3>City of Aspen Open Data Site </h3>
             
           </div>
@@ -521,13 +540,14 @@
             onclick="openPDFModal(
               'Geospatial Analysis of CA drought.pdf',
               `<h2>California Drought Analysis</h2>
-              <p>Analyzed the spatial and temporal patterns of drought in California using GIS techniques. Created maps and visualizations to illustrate the severity and impact of drought conditions across the state.</p>   
-              <p><strong>Organization:</strong> Fort Lewis College, GIS Certificate Capstone</p>
+              <p>Analyzed the spatial and temporal patterns of drought in California using Landsat Imagery and GIS techniques. Created maps and visualizations to illustrate the severity and impact of drought conditions across the state.</p>   
+              <p><strong>Organization:</strong> Fort Lewis College, Environmental Studies Capstone</p>
               <p><strong>Location:</strong> Durango, CO, USA</p>
               <p><strong>Year:</strong> 2016</p>
-              <p><strong>Tools:</strong> ArcGIS Pro, QGIS, Python</p>` 
+              <p><strong>Tools:</strong> ArcMap, Landsat Imagery</p>` 
             )"
-              >                                    
+              >  
+            <span class = "year-badge">2016</span>                                  
               <img src="images/Droughtthumb.png" alt="Project 12 thumbnail" class="project-thumb">
             <h3>California Drought Analysis</h3>
           </div>
@@ -536,19 +556,20 @@
           class="project-card project-link" 
           onclick="openPDFModal(
             'https://sketchfab.com/models/e46a0c92cc2d4a85b61e5df01a6e1a87/embed',
-            `<h2>Horse Gulch Gully Model</h2>
-            <p>3D terrain model created using drone photogrammetry. Processed in Agisoft Metashape and visualized through Sketchfab.</p>
+            `<h2>3D Erosion Model</h2>
+            <p>3D terrain model created using drone photogrammetry to determine soil lost in heavy rain storms in Horse Gulch, Durango. Processed the raw data in Pix4D and then
+               a 3d model and point cloud was created in ArcMap. Final model was uploaded to Sketchfab.</p>
             <p><strong>Organization:</strong> Fort Lewis College, GIS Certificate Capstone</p>
             <p><strong>Location:</strong> Durango, CO, USA</p>
             <p><strong>Year:</strong> 2016</p>
-            <p><strong>Tools:</strong> Pix4D, DGI Drone, ArcGIS Pro, Sketchfab</p>`
+            <p><strong>Tools:</strong> Pix4D, DGI Drone, ArcMap, Sketchfab</p>`
             )"
           >
                  
             <span class = "year-badge">2016</span> 
-            <img src="images/HorseGulch.png"  class="project-thumb" alt="Horse Gulch Gully Model">
-            <h3>Horse Gulch Gully Model</h3>
-            <p>3D terrain model (Sketchfab)</p>
+            <img src="images/HorseGulch.png"  class="project-thumb" alt="3D Erosion Model">
+            <h3>3D Erosion Model</h3>
+            
           </div>
         
         <div 
@@ -568,7 +589,7 @@
 
   <a href="https://www.linkedin.com/in/hamish-henderson" target="_blank" class="social-item">
     <!-- LinkedIn logo -->
-    <img src="images/linkedin_icon.svg" alt=" LinkedIn" class="social-img" />
+    <img src="images/logos/link.png" alt=" LinkedIn" class="social-img" />
   </a>
 
   <a href="mailto:hamish.d.henderson25@gmail.com" class="social-item">
@@ -642,15 +663,37 @@
 
 <script>
 function openPDFModal(url, descriptionHtml = "") {
-  document.getElementById('pdfFrame').src = url;
+  const pdfModal = document.getElementById('pdfModal');
+  const iframe = document.getElementById('pdfFrame');
+  const img = document.getElementById('imageFrame');
+
+  const isImage = /\.(png|jpe?g|gif|webp)$/i.test(url);
+
+  if (isImage) {
+    // Show image, hide iframe
+    img.src = url;
+    img.style.display = 'block';
+    iframe.style.display = 'none';
+  } else {
+    // Show iframe (PDF, Tableau, etc.), hide image
+    iframe.src = url;
+    iframe.style.display = 'block';
+    img.style.display = 'none';
+  }
+
   document.getElementById('modalDescription').innerHTML = descriptionHtml;
-  document.getElementById('pdfModal').style.display = 'flex';
+  pdfModal.style.display = 'flex';
 }
 
 function closePDFModal(event) {
   if (event.target.id === 'pdfModal' || event.target.classList.contains('close-btn')) {
-    document.getElementById('pdfModal').style.display = 'none';
-    document.getElementById('pdfFrame').src = '';
+    const pdfModal = document.getElementById('pdfModal');
+    const iframe = document.getElementById('pdfFrame');
+    const img = document.getElementById('imageFrame');
+
+    pdfModal.style.display = 'none';
+    iframe.src = '';
+    img.src = '';
   }
 }
 </script>

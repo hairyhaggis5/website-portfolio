@@ -17,10 +17,16 @@
   border-bottom: 2px solid transparent;
 }
 
-.nav-link.active {
-  border-bottom-color: #60a5fa; /* nice blue highlight */
+
+.nav-link span {
+  text-decoration: none;     /* default: no underline */
 }
 
+.nav-link.active span {
+  text-decoration: underline;  /* underline only the text */
+  text-underline-offset: 4px;
+  border-bottom-color: #60a5fa;  /* cleaner spacing */
+}
 
 .container {
   width: 90%;
@@ -201,8 +207,14 @@ body .theme-toggle:hover {
   display: block;
 }
 
-.project-card h3,
+.project-card h3 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .project-card p {
+  text-align: center;
   padding: 0.75rem 1rem 0.75rem;
   margin: 0;
 }
@@ -217,7 +229,12 @@ body .theme-toggle:hover {
   color: #a1aab3;
 }
 
-
+.projects-grid .project-card h3 {
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
 .social-item {
   display: inline-flex;
   align-items: center;
@@ -228,7 +245,7 @@ body .theme-toggle:hover {
   font-size: 1rem;
   font-weight: 500;
   
-  padding: 0.6rem 0.8rem;
+  padding: 10px;
   border-radius: 8px;
   background: rgba(255,255,255,0.05); /* subtle dark card */
   transition: background 0.2s ease;
@@ -241,7 +258,9 @@ body .theme-toggle:hover {
 .social-img {
   width: 25px;
   height: 25px;
+  padding: 1px;
   flex-shrink: 0;
+  object-fit: contain;
   
 }
 
@@ -275,13 +294,13 @@ body .theme-toggle:hover {
 }
 
 .pdf-modal-content {
-  width: 95vw;
-  height: 95vh;
-  max-width: none;
-  max-height: none; 
+  width: 90vw;
+  max-width: 1400px;
+  max-height: 90vh;
+  height: auto;
   background: #1e293b;
   border-radius: 10px;
-  overflow: scroll;
+  overflow: hidden;
   position: relative;
 }
 
@@ -318,13 +337,19 @@ body .theme-toggle:hover {
 .modal-flex {
   display: flex;
   gap: 20px;
-  height: 100%;
+  height: auto;
+  align-items: flex-start;
 }
 
-.modal-flex iframe {
-  flex: 3;
-  height: 100%;
-  border-radius: 8px;
+.pdf-modal-content {
+  width: 90vw;
+  max-width: 1400px;
+  max-height: 90vh;
+  background: #1e293b;
+  border-radius: 10px;
+  border: 2px solid rgba(148, 154, 164, 0.4);
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(90, 92, 94, 0.45);
 }
 
 .modal-description {
@@ -335,6 +360,7 @@ body .theme-toggle:hover {
   font-size: 0.95rem;
   background: rgba(15, 23, 42, 0.6);
   border-radius: 8px;
+  align-self:stretch;
 }
 
 .modal-description h2 {
@@ -466,4 +492,26 @@ section h2 {
 .role-skills {
   font-size: 0.85rem;
   color: #a5b4fc;
+}
+.modal-media {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Iframe (PDFs, Tableau, etc.) */
+.modal-media iframe {
+  width: 100%;
+  height: 80vh;
+  border-radius: 8px;
+}
+
+/* Image mode (screenshots like Kaart Drives) */
+.modal-media img {
+  display: none;               /* default hidden, JS shows it */
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 8px;
+  object-fit: contain;         /* show entire image */
 }
