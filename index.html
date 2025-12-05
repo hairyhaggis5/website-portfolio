@@ -368,14 +368,21 @@
           <div 
             class="project-card project-link"
             
-            onclick='openPDFModal("https://public.tableau.com/views/DS620FinalProject_Hamish/Miami2025Story?:showVizHome=no&amp;:embed=true",
-            "<h2>Miami F1 Dashboard</h2>\
+            onclick='openTableauModal("https://public.tableau.com/views/DS620FinalProject_Hamish/Miami2025Story?:showVizHome=no&amp;:embed=true",
+            `<h2>Miami F1 Dashboard</h2>\
             <p>Created an interactive dashboard for the Miami F1 race using Tableau, visualizing key race metrics and insights.\
             Won the Best Visualization award in my Data Science program for this project. </p>\
             <p><strong>Organization:</strong> Saint Peter&apos;s University</p>\
             <p><strong>Location:</strong> Jersey City, NJ, USA</p>\
             <p><strong>Year:</strong> 2025</p>\
-            <p><strong>Tools:</strong> Tableau, Python</p>"
+            <p><strong>Tools:</strong> Tableau, Python</p>
+            <p style="margin-top: 1rem;">
+            <a href="https://public.tableau.com/app/profile/hamish.henderson4081/viz/DS620FinalProject_Hamish/Miami2025Story"
+              target="_blank"
+              class="modal-button">
+              View Full Size Dashboard&rarr;
+              </a>
+            </p>`
           )'
           
           >
@@ -705,6 +712,17 @@ function openPDFModal(url, descriptionHtml = "") {
 
   document.getElementById('modalDescription').innerHTML = descriptionHtml;
   pdfModal.style.display = 'flex';
+}
+
+function openTableauModal(url, descriptionHtml = "") {
+  const frame = document.getElementById('pdfFrame');
+
+  // Turn on the Tableau-specific sizing
+  frame.classList.add('tableau-frame');
+
+  frame.src = url;
+  document.getElementById('modalDescription').innerHTML = descriptionHtml;
+  document.getElementById('pdfModal').style.display = 'flex';
 }
 
 function closePDFModal(event) {
