@@ -17,6 +17,20 @@
   border-bottom: 2px solid transparent;
 }
 
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
 
 .nav-link span {
   text-decoration: none;     /* default: no underline */
@@ -341,9 +355,9 @@ body .theme-toggle:hover {
   align-items: flex-start;
 }
 
-<<<<<<< HEAD
+
 /* Only shrink Tableau dashboards a bit */
-/
+
 .modal-flex iframe.tableau-frame {
   width: 100%;          /* same width as normal */
   height: 80vh;         /* fill the left column vertically */
@@ -353,8 +367,8 @@ body .theme-toggle:hover {
   align-self: center;
 }
 
-=======
->>>>>>> f5b3354 (updates)
+
+
 .pdf-modal-content {
   width: 90vw;
   max-width: 1400px;
@@ -508,8 +522,7 @@ section h2 {
   color: #a5b4fc;
 }
 .modal-media {
-<<<<<<< HEAD
-  flex:auto;
+  flex: 2;
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -522,34 +535,20 @@ section h2 {
   width: 100%;
   height: 80vh;
   max-height: 80vh;
-  object-fit: contain;
-  margin:auto;
-=======
-  flex: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Iframe (PDFs, Tableau, etc.) */
-.modal-media iframe {
-  width: 100%;
-  height: 80vh;
->>>>>>> f5b3354 (updates)
+  margin: auto;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 /* Image mode (screenshots like Kaart Drives) */
 .modal-media img {
-<<<<<<< HEAD
-=======
-  display: none;               /* default hidden, JS shows it */
->>>>>>> f5b3354 (updates)
+
+
   max-width: 100%;
   max-height: 80vh;
   border-radius: 8px;
   object-fit: contain;         /* show entire image */
-<<<<<<< HEAD
+
   justify-content: center;
   margin: auto;
 }
@@ -600,6 +599,3 @@ section h2 {
   text-decoration: none !important;
 }
 
-=======
-}
->>>>>>> f5b3354 (updates)

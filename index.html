@@ -42,16 +42,16 @@
  <header class="site-header">
   <div class="container header-layout">
     <div>
-      <h1>Hamish Henderson</h1>
+      <h1>Hamish Henderson, GISP</h1>
       <p class="tagline">GIS & Data Science • Mapping • Visualization • Remote Project Leadership</p>
     </div>
     <div class="header-right">
-      <nav>
-        <a href="#about" data-section="about" class="nav-link active">About • </a>
-        <a href="#projects" data-section="projects" class="nav-link">Projects • </a>
-        <a href="#experience" data-section="experience" class="nav-link">Experience • </a>
-        <a href="#education" data-section="education" class="nav-link">Education</a>
-      </nav>
+      <nav class="top-nav">
+        <a href="#about" data-section="about" class="nav-link active"><span>About</span> </a>
+        <a href="#projects" data-section="projects" class="nav-link"><span>Projects</span> </a>
+        <a href="#experience" data-section="experience" class="nav-link"><span>Experience</span> </a>
+        <a href="#education" data-section="education" class="nav-link"><span>Education</span> </a>
+              </nav>
     </div>
   </div>
 </header>
@@ -323,20 +323,43 @@
     <!-- EDUCATION -->
     <section id="education" class="section page-section">
       <div class="container">
-        <h2 class="section-title">Education</h2>
+        <h2 class="section-title">Education and Certifications</h2>
 
         <div class="experience-company">
           <div class="company-header">
+            <img src="images/logos/gisp.png" alt="GISCI logo" class="experience-logo">
             <div class="company-meta">
-              <h3>Saint Peter&apos;s University</h3>
-              <p class="company-location">Jersey City, New Jersey, USA</p>
-              <p class="company-duration">M.S. Data Science</p>
+              <h3>GISP (Certified GIS Professional)</h3>
+              <p class="company-location">GIS Certification Institute (GISCI)</p>
             </div>
           </div>
 
           <div class="company-roles">
             <div class="role-item">
-              <h4>Master of Science in Data Science</h4>
+              <h4>2022 to Present</h4>
+              <p>
+                Earned the GISP credential through a combination of professional GIS experience,
+                advanced education, and contributions to the geospatial profession. The certification
+                recognizes expertise in GIS practice, ethics, project delivery, and continued professional development.
+              </p>
+              <p class="role-skills"><strong>Skills:</strong> GIS Professional Practice · Geospatial Analysis · Cartography · Project Leadership</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-company">
+          <div class="company-header">
+            <img src="images/logos/saint_peters.png" alt="Saint Peter&apos;s University logo" class="experience-logo">
+            <div class="company-meta">
+              <h3>Master of Science in Data Science</h3>
+              <p class="company-location">Saint Peter&apos;s University · Jersey City, New Jersey</p>
+              <p class="company-duration">2022 – 2025</p>
+            </div>
+          </div>
+
+          <div class="company-roles">
+            <div class="role-item">
+              <h4>Graduate Focus</h4>
               <p>
                 Graduate coursework and projects focused on applied data science, machine learning,
                 data visualization, analytics, and Python-based workflows. Completed a capstone project
@@ -349,16 +372,17 @@
 
         <div class="experience-company">
           <div class="company-header">
+            <img src="images/logos/redlands.png" alt="University of Redlands logo" class="experience-logo">
             <div class="company-meta">
-              <h3>University of Redlands</h3>
-              <p class="company-location">Redlands, California, USA</p>
-              <p class="company-duration">M.S. Geographic Information Systems</p>
+              <h3>Master of Science in Geographic Information Science</h3>
+              <p class="company-location">University of Redlands · Redlands, California</p>
+              <p class="company-duration">2018</p>
             </div>
           </div>
 
           <div class="company-roles">
             <div class="role-item">
-              <h4>Master of Science in Geographic Information Systems</h4>
+              <h4>Graduate Focus</h4>
               <p>
                 Graduate GIS program focused on geospatial analysis, cartography, geodatabase design,
                 Esri-based workflows, and applied GIS project development. Final project built a complete
@@ -371,22 +395,33 @@
 
         <div class="experience-company">
           <div class="company-header">
+            <img src="images/logos/fort_lewis.png" alt="Fort Lewis College logo" class="experience-logo">
             <div class="company-meta">
-              <h3>Fort Lewis College</h3>
-              <p class="company-location">Durango, Colorado, USA</p>
-              <p class="company-duration">B.A. Environmental Studies</p>
+              <h3>Bachelor of Arts in Environmental Studies</h3>
+              <p class="company-location">Fort Lewis College · Durango, Colorado</p>
+              <p class="company-duration">2012 – 2016</p>
             </div>
           </div>
 
           <div class="company-roles">
             <div class="role-item">
-              <h4>Bachelor&apos;s Degree in Environmental Studies</h4>
+              <h4>Undergraduate Focus</h4>
               <p>
                 Undergraduate studies focused on environmental systems, sustainability, fieldwork,
                 GIS, and applied spatial analysis. Completed environmental and GIS-focused projects,
-                including California drought analysis and drone-based terrain modeling.
+                including California drought analysis and mine water contamination projects.
               </p>
               <p class="role-skills"><strong>Skills:</strong> Environmental Analysis · GIS · Remote Sensing · Field Data Collection · Sustainability</p>
+            </div>
+
+            <div class="role-item">
+              <h4>GIS Certificate</h4>
+              <p>
+                Completed a GIS certificate alongside undergraduate studies, building practical skills in
+                spatial analysis, cartography, remote sensing, GPS field data collection, and GIS project workflows.
+                Certificate work included drone-based terrain modeling and geospatial analysis projects.
+              </p>
+              <p class="role-skills"><strong>Skills:</strong> ArcMap · Spatial Analysis · Cartography · GPS · Drone Photogrammetry</p>
             </div>
           </div>
         </div>
@@ -398,8 +433,37 @@
     <section id="projects" class="section page-section">
       <div class="container">
         
-        <div class="projects-grid">
+        
+          <!-- Project 2 F1 Machine Learning-->
+          
+
+         <div class="projects-grid">
+          <div
+            class="project-card project-link"
+            onclick="openPDFModal(
+            'Predicting Lap Times in Formula 1 Report.pdf',
+            `<h2>Predicting F1 Lap Times with Machine Learning</h2>
+            <p>Capstone project for M.S. in Data Science degree. Created a script to predict Formula One (F1) race lap times for the 2025 season using machine learning models. 
+            I utilized various machine learning algorithms to analyze historical race data, driver performance metrics, and track conditions to predict race outcomes. 
+            Four different models were tested and compared for accuracy. Project concluded with a presentation and report. 
+            Script can be accesed via
+            <a href='https://github.com/hairyhaggis5/MS-Data-Science-Capstone' target='_blank'>GitHub</a></p>
+            <p><strong>Organization:</strong> Saint Peter&apos;s University</p>\
+            <p><strong>Location:</strong> Jersey City, NJ, USA</p>\
+            <p><strong>Year:</strong> 2025</p>\
+            <p><strong>Tools:</strong> Python (Sklearn, matplotlib)</p>`
+            )"
+            
+          >
+            <img src="images/F1predthum.png" alt="F1 Predicting Models" class="project-thumb">
+            <span class = "year-badge">2025</span>
+            <h3>Predicting Lap Times in F1 Using Machine Learning</h3>
+          </div>
+          
+        
+          
           <!-- Project 1 F1 Miami Dashboard-->
+          
           <div 
             class="project-card project-link"
             
@@ -424,29 +488,7 @@
             <img src="images/Miami_Dashboard_Thumb.png" alt="Miami F1 Dashboard" class="project-thumb">
             <span class = "year-badge">2025</span>
             <h3>Miami F1 Dashboard</h3>
-          </div>
-
-          <!-- Project 2 F1 Machine Learning-->
-          <div
-            class="project-card project-link"
-            onclick="openPDFModal(
-            'images/F1predthum.png',
-            `<h2>Predicting F1 Race Results with Machine Learning</h2>
-            <p>Capstone Project for M.S. in Data Science degree. Created a script to predict formuala one race outcomes using machine learning models. Script can be accesed on GitHub:
-            <a href='https://github.com/hairyhaggis5/MS-Data-Science-Capstone' target='_blank'>GitHub</a></p>
-            <p><strong>Organization:</strong> Saint Peter&apos;s University</p>\
-            <p><strong>Location:</strong> Jersey City, NJ, USA</p>\
-            <p><strong>Year:</strong> 2025</p>\
-            <p><strong>Tools:</strong> Tableau, Python (Sklearn, matplotlib)</p>`
-            )"
-            
-          >
-            <img src="images/F1predthum.png" alt="F1 Predicting Models" class="project-thumb">
-            <span class = "year-badge">2025</span>
-            <h3>Predicting F1 Race Results with Machine Learning</h3>
-          </div>
-
-          
+          </div> 
 
             
          <!-- Project 3 Kaart Drives Story Map -->
@@ -506,7 +548,7 @@
             <p><strong>Organization:</strong> Kaart </p>\
             <p><strong>Location:</strong> San Francisco, CA, USA</p>\
             <p><strong>Year:</strong> 2023</p>\
-            <p><strong>Tools:</strong> Project Management, Field Data Collection, Geospatial Analysis</p>`
+            <p><strong>Tools:</strong> Project Management, Field Data Collection, Mapillary</p>`
             )"
             >
             <span class = "year-badge">2023</span>
@@ -587,7 +629,7 @@
             <p><strong>Organization:</strong> University of Redlands</p>\
             <p><strong>Location:</strong> Aspen, Colorado</p>\
             <p><strong>Year:</strong> 2018</p>\
-            <p><strong>Tools:</strong> ArcGIS Pro, QGIS, Python</p>`
+            <p><strong>Tools:</strong> ArcGIS Pro, Geometric Networks </p>`
 
             )"
              >
@@ -773,7 +815,9 @@ function openTableauModal(url, descriptionHtml = "") {
   img.style.display = 'none';
   img.src = '';
   iframe.style.display = 'block';
+  iframe.classList.add('tableau-frame');
   iframe.src = url;
+
   document.getElementById('modalDescription').innerHTML = descriptionHtml;
   pdfModal.style.display = 'flex';
 }
@@ -786,6 +830,7 @@ function closePDFModal(event) {
 
     pdfModal.style.display = 'none';
     iframe.src = '';
+    iframe.classList.remove('tableau-frame');
     img.src = '';
     iframe.style.display = 'block';
     img.style.display = 'none';
